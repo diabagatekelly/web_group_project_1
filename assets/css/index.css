@@ -1,9 +1,162 @@
 body {
+  display: flex;
+  flex-direction: column;
+  min-width: 39em;
+  align-items: center;
+  text-align: center;
+  color: #323232;
+  font-family: 'PT Serif', serif;
+}
+
+.hero-image {
+  background: url("../images/kats-hero-mobile-bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 21.9em;
+  width: 39em;
+  overflow: hidden;
+  position: relative;
+  left: 0em;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 50% 50%;
+}
+
+.text {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  text-transform: uppercase;
+  color: #eeeeee;
+}
+
+.middle {
+  font-size: 3em;
   margin: 0;
+  padding: 0;
+  font-style: italic;
+  color: #eeeeee;
+}
+
+.first {
+  font-size: 1.5em;
+  margin: 2em 0 0 1.5em;
+  padding: 0;
+  text-align: left;
+  color: #eeeeee;
+}
+
+.last {
+  font-size: 1.5em;
+  margin: 0 1.5em 0 0;
+  padding: 0;
+  text-align: right;
+  color: #eeeeee;
+}
+
+
+.kats-pic {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+  z-index: 5;
+  align-self: end;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  padding: 1.5em;
+}
+
+p {
+  font-size: 1em;
+}
+
+h3 {
+  color: #00897f;
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+
+nav {
+  display: none;
+}
+
+.cat3 {
+  border-radius: 100%;
+  width: 75%;
+  padding: 3em;
+}
+
+.info {
+  background-color: #eeeeee;
+  padding: 1.5em;
+  width: 100%;
+}
+
+.days {
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.business,
+.contact {
+ text-align: left;
+}
+
+.address {
+  color: #f26522;
+}
+
+footer {
+  background-color: #00897f;
+  width: 100%;
+}
+
+.map {
+  background: url("../images/kats-map.jpg") no-repeat center;
+  background-size: cover;
+  height: 500px;
+  min-width: 39em;
+  position: relative;
+}
+
+footer h4 {
+  color: #eeeeee;
+  padding: 0.75em;
 }
 
 /* On devices wider than 660px */
 @media(min-width: 660px) {
+
+  .header {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1em;
+    width: 100%;
+    padding: 1em 0 1em;
+  }
+
+  .header h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+  }
+
+  nav {
+    display: inline-flex;
+    align-self: flex-end;
+  }
+
+
 }
 
 /* On devices wider than 940px */
