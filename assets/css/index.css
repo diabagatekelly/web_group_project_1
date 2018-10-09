@@ -13,9 +13,8 @@ body {
   background-size: cover;
   height: 21.9em;
   width: 39em;
-  overflow: hidden;
+  max-width: 90em;
   position: relative;
-  left: 0em;
   display: grid;
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 50% 50%;
@@ -42,7 +41,7 @@ body {
 
 .first {
   font-size: 1.5em;
-  margin: 2em 0 0 1.5em;
+  margin: 2em 0 0 2.5em;
   padding: 0;
   text-align: left;
   color: #eeeeee;
@@ -50,7 +49,7 @@ body {
 
 .last {
   font-size: 1.5em;
-  margin: 0 1.5em 0 0;
+  margin: 0 2em 0 0;
   padding: 0;
   text-align: right;
   color: #eeeeee;
@@ -68,6 +67,8 @@ body {
 
 .intro {
   padding: 1.5em;
+  font-size: 2em;
+  text-align: left;
 }
 
 p {
@@ -78,12 +79,22 @@ h3 {
   color: #00897f;
   text-transform: uppercase;
   font-family: 'PT Sans Narrow', sans-serif;
+  margin: 0;
 }
 
 h4 {
   font-size: 1.5em;
 }
 
+.intro h2 {
+  display: block;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+h2 {
+  display: none;
+}
 
 nav {
   display: none;
@@ -95,24 +106,56 @@ nav {
   padding: 3em;
 }
 
+.images {
+  display: none;
+}
+
 .info {
+  font-size: 2em;
+  line-height: 1.75;
   background-color: #eeeeee;
   padding: 1.5em;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.info h3 {
+  text-align: center;
 }
 
 .days {
   text-transform: uppercase;
   font-family: 'PT Sans Narrow', sans-serif;
+
 }
 
 .business,
 .contact {
- text-align: left;
+text-align: left;
+margin: 0 1.8em;
+position: relative;
+left: -2em;
 }
 
-.address {
+.business {
+  margin-bottom: 2.5em;
+}
+
+.contact {
+  margin-bottom: -1.5em;
+}
+
+.address,
+.address2 {
   color: #f26522;
+  font-weight: bold;
+}
+
+.address2 {
+position: relative;
+left: 3.7em;
+top: -1.5em;
 }
 
 footer {
@@ -135,6 +178,10 @@ footer h4 {
 
 /* On devices wider than 660px */
 @media(min-width: 660px) {
+  body {
+    min-width: 58.75em;
+    background-color: white;
+  }
 
   .header {
     display: inline-flex;
@@ -142,23 +189,120 @@ footer h4 {
     justify-content: space-between;
     font-size: 1em;
     width: 100%;
-    padding: 1em 0 1em;
+    margin: 1em 0;
   }
 
   .header h4 {
-    margin: 0;
-    padding: 0;
     font-size: 1em;
+    margin: 0 0 0 1em;
   }
 
   nav {
-    display: inline-flex;
-    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 8em;
+    margin: 0 2em 0 0;
   }
 
+  .hero-image {
+    background: url("../images/kats-hero-desktop-bg.jpg") no-repeat center;
+    position: relative;
+    width: 58.75em;
+    grid-template-columns: 20% 60% 20%;
+  }
 
+  .first {
+    font-size: 1.5em;
+    margin: 2.5em 0 0 3.5em;
+    padding: 0;
+    text-align: left;
+    color: #eeeeee;
+  }
+
+  .last {
+    font-size: 1.5em;
+    margin: 0 3.5em 0 0;
+    padding: 0;
+    text-align: right;
+    color: #eeeeee;
+  }
+
+  .intro {
+    padding: 1em 4em;
+    font-size: 1.3em;
+    text-align: left;
+    line-height: 1.75;
+  }
+
+  .info {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.3em;
+  }
+
+  .box {
+    background-color: #eeeeee;
+    margin: 1em;
+    padding: 1em;
+  }
+
+   h2 {
+    display: block;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 1em 0 0 0;
+  }
+
+  .business,
+  .contact {
+  margin: 0 2em;
+  position: relative;
+  left: -2em;
+  }
+
+  .map {
+    background: url("../images/kats-map.jpg") no-repeat center;
+    background-size: cover;
+    height: 250px;
+    min-width: 39em;
+    position: relative;
+  }
+
+  .cat3 {
+    display: none;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .cat1 {
+    border-radius: 100%;
+    margin: 2em;
+    width: 50%;
+  }
 }
+
+
 
 /* On devices wider than 940px */
 @media(min-width: 940px) {
+
+  body {
+    min-width: 90em;
+    background-color: white;
+  }
+  
+  .hero-image {
+    background: url("../images/kats-hero-desktop-bg.jpg") no-repeat center;
+    position: relative;
+    width: 90em;
+    grid-template-columns: 30% 40% 30%;
+  }
 }
